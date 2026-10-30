@@ -1,0 +1,73 @@
+/* Hallmark · custom theme · vibe: "a forge after dark, molten signal"
+ * paper oklch(14% 0.012 55) · accent oklch(74% 0.18 52) molten orange
+ * display: Big Shoulders Display · body: Geist · outlier: JetBrains Mono (technical labels)
+ * axes: dark / display-condensed / warm
+ */
+:root {
+  /* colour */
+  --color-paper:    oklch(14% 0.012 55);
+  --color-paper-2:  oklch(17.5% 0.013 55);
+  --color-paper-3:  oklch(21% 0.014 55);
+  --color-rule:     oklch(29% 0.012 55);
+  --color-rule-2:   oklch(38% 0.014 55);
+  --color-neutral:  oklch(64% 0.012 60);
+  --color-muted:    oklch(78% 0.010 65);
+  --color-ink:      oklch(95% 0.008 75);
+  --color-accent:   oklch(74% 0.18 52);
+  --color-accent-2: oklch(84% 0.12 70);
+  --color-accent-ink: oklch(18% 0.03 50);
+  --color-focus:    oklch(80% 0.17 60);
+  --color-bloom:    oklch(45% 0.14 45);
+  --color-shadow:   oklch(8% 0.01 55);
+
+  /* type */
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body:    "Geist", ui-sans-serif, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1.0625rem;
+  --text-md:   1.333rem;
+  --text-lg:   1.777rem;
+  --text-xl:   2.369rem;
+  --text-2xl:  clamp(2.25rem, 3vw + 1.25rem, 3.75rem);
+  --text-display: clamp(4rem, 13vw, 13.5rem);
+
+  /* space (4pt) */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+  --page-gutter: clamp(1rem, 4vw, 3.5rem);
+  --page-max: 88rem;
+
+  /* shape */
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+  --rule-thick: 3px;
+
+  /* motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long:  420ms;
+
+  /* depth */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+}

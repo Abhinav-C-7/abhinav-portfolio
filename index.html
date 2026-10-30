@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abhinav C · Full-stack developer</title>
+  <meta name="description" content="Abhinav C — full-stack and React Native developer. Designed, built and deployed TrainLabs solo: mobile app, web app, NestJS API, PostgreSQL.">
+  <meta name="theme-color" content="#16110d">
+  <meta property="og:title" content="Abhinav C · One person. Every layer.">
+  <meta property="og:description" content="Full-stack and React Native developer. Built TrainLabs end to end, alone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Geist:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316110d'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f08a3c'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Nav · N13 inline ⌘K pill -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Abhinav C, back to top">Abhinav<span class="nav__brand-c">C</span></a>
+      <button class="searchpill" id="searchpill" type="button" aria-haspopup="dialog" aria-controls="cmdk">
+        <svg class="searchpill__ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>
+        <span class="searchpill__text">Jump anywhere</span>
+        <span class="searchpill__kbd" aria-hidden="true"><kbd data-mod>Ctrl</kbd><kbd>K</kbd></span>
+      </button>
+      <nav class="nav__right" aria-label="Primary">
+        <a class="nav__link" href="#system">System</a>
+        <a class="nav__link" href="#work">Work</a>
+        <a class="btn btn--line nav__cta" href="#contact">Hire me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero · marquee statement with x-ray spotlight -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__xray" id="xray" aria-hidden="true">
+        <pre class="xray xray--base"></pre>
+        <pre class="xray xray--lit"></pre>
+      </div>
+
+      <p class="hero__meta reveal" style="--i:0">
+        <span>Abhinav C</span>
+        <span>Full-stack &amp; React Native developer</span>
+        <span>Kannur, Kerala</span>
+        <span class="hero__status"><span class="pulse" aria-hidden="true"></span>Open to full-time roles</span>
+      </p>
+
+      <div class="hero__titlewrap" id="titlewrap">
+        <h1 class="hero__title hero__title--solid" id="hero-title">
+          <span class="hero__line reveal" style="--i:1"><span class="hero__word">One</span> <span class="hero__word">person<span class="hero__dot">.</span></span></span>
+          <span class="hero__line reveal" style="--i:2"><span class="hero__word">Every</span> <span class="hero__word">layer<span class="hero__dot">.</span></span></span>
+        </h1>
+      </div>
+
+      <div class="hero__foot reveal" style="--i:3">
+        <p class="hero__lede">I designed, built and deployed <a href="https://trainlabs.app" class="link">TrainLabs</a> on my own: the mobile app, the web app, the API, the database and the deploys.</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#system">Trace the system <span aria-hidden="true">↓</span></a>
+          <button class="btn btn--line copy-email" type="button" data-label="abhinavc038@gmail.com">abhinavc038@gmail.com</button>
+        </div>
+        <p class="hero__hint" aria-hidden="true"><span class="hero__hint-key">x-ray</span> move your cursor across the headline</p>
+      </div>
+    </section>
+
+    <!-- Map · TrainLabs system diagram -->
+    <section class="system" id="system" aria-labelledby="system-title">
+      <div class="system__head">
+        <h2 class="h2" id="system-title">Phone → API → database. I built every box.</h2>
+        <p class="system__lede">TrainLabs is a platform for online fitness coaches to run programs, clients and billing. It's pre-launch and live at <a class="link" href="https://trainlabs.app">trainlabs.app</a>. Pick a request below and watch it move through the stack.</p>
+      </div>
+
+      <div class="scenarios" role="radiogroup" aria-label="Pick a request to trace">
+        <button class="scenario is-active" role="radio" aria-checked="true" data-scenario="chat">A client sends a chat message</button>
+        <button class="scenario" role="radio" aria-checked="false" data-scenario="pdf">A trainer imports a workout PDF</button>
+        <button class="scenario" role="radio" aria-checked="false" data-scenario="video">A client uploads a form video</button>
+        <button class="scenario" role="radio" aria-checked="false" data-scenario="pay">A client subscribes</button>
+      </div>
+
+      <div class="system__stage">
+        <div class="map" id="map">
+          <svg class="map__wires" id="wires" aria-hidden="true"></svg>
+          <div class="packet" id="packet" aria-hidden="true"></div>
+
+          <div class="node" data-node="mobile">
+            <span class="node__kind">Mobile app</span>
+            <span class="node__name">React Native · Expo</span>
+            <span class="node__note">Trainers and clients, iOS + Android</span>
+          </div>
+          <div class="node" data-node="web">
+            <span class="node__kind">Web app</span>
+            <span class="node__name">React + Vite · Vercel</span>
+            <span class="node__note">The trainer's desk</span>
+          </div>
+          <div class="node node--core" data-node="api">
+            <span class="node__kind">API</span>
+            <span class="node__name">NestJS · Railway</span>
+            <span class="node__note">JWT + role guards, Socket.IO, webhooks</span>
+          </div>
+          <div class="node" data-node="db">
+            <span class="node__kind">Database</span>
+            <span class="node__name">PostgreSQL · Prisma · Neon</span>
+            <span class="node__note">53 models</span>
+          </div>
+          <div class="node" data-node="r2">
+            <span class="node__kind">Media</span>
+            <span class="node__name">Cloudflare R2</span>
+            <span class="node__note">Private buckets, presigned URLs</span>
+          </div>
+          <div class="node" data-node="gemini">
+            <span class="node__kind">AI</span>
+            <span class="node__name">Gemini API</span>
+            <span class="node__note">Structured output</span>
+          </div>
+          <div class="node" data-node="pay">
+            <span class="node__kind">Payments</span>
+            <span class="node__name">Razorpay</span>
+            <span class="node__note">Subscriptions, test mode</span>
+          </div>
+        </div>
+
+        <div class="trace">
+          <p class="trace__label">Request trace</p>
+          <ol class="trace__log" id="trace" aria-live="polite"></ol>
+          <button class="trace__replay" id="replay" type="button">Replay</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Receipts · real numbers from the TrainLabs codebase -->
+    <section class="receipts" aria-labelledby="receipts-title">
+      <h2 class="h2" id="receipts-title">The receipts.</h2>
+      <dl class="stats">
+        <div class="stat"><dt>Prisma models in the schema</dt><dd>53</dd></div>
+        <div class="stat"><dt>Jest test cases</dt><dd>216</dd></div>
+        <div class="stat"><dt>Merged pull requests</dt><dd>91</dd></div>
+        <div class="stat"><dt>Exercises the AI importer matches against</dt><dd>873</dd></div>
+      </dl>
+      <p class="receipts__note">One codebase, one developer, December 2025 to now.</p>
+    </section>
+
+    <!-- Also shipped · index rows -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <h2 class="h2" id="work-title">Also shipped.</h2>
+      <ol class="work__list">
+        <li>
+          <a class="row" href="https://github.com/Abhinav-C-7/done-it">
+            <figure class="row__img"><img src="assets/img/done-it.jpg" alt="" loading="lazy" width="1200" height="800"></figure>
+            <div class="row__main">
+              <h3 class="row__title">Done-It</h3>
+              <p class="row__sub">On-demand home services marketplace · published at IEEE NetACT 2025</p>
+            </div>
+            <p class="row__desc">Three roles (customer, serviceman, admin). Matches servicemen to nearby jobs with the Haversine formula over PostgreSQL points, and pushes live locations through per-user Socket.IO rooms.</p>
+            <p class="row__stack">React · Express · PostgreSQL · Socket.IO · Leaflet</p>
+            <span class="row__year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a class="row" href="https://github.com/Abhinav-C-7/coursecore">
+            <figure class="row__img"><img src="assets/img/coursecore.jpg" alt="" loading="lazy" width="1200" height="800"></figure>
+            <div class="row__main">
+              <h3 class="row__title">CourseCore</h3>
+              <p class="row__sub">Multi-tenant SaaS for tuition centres</p>
+            </div>
+            <p class="row__desc">Every record carries a tenant ID, enforced in one Express middleware. Tenants are provisioned by a verified Clerk webhook. Self-hosted on a Linux VPS behind Nginx, PM2 and Let's Encrypt.</p>
+            <p class="row__stack">React · Express · Prisma · PostgreSQL · Clerk · Nginx</p>
+            <span class="row__year">2025–26</span>
+          </a>
+        </li>
+        <li>
+          <a class="row" href="https://github.com/Abhinav-C-7/Attendance-Management-System">
+            <figure class="row__img"><img src="assets/img/attendance.jpg" alt="" loading="lazy" width="1200" height="800"></figure>
+            <div class="row__main">
+              <h3 class="row__title">Attendance System</h3>
+              <p class="row__sub">Open-source contribution · 2 merged pull requests</p>
+            </div>
+            <p class="row__desc">Landed night-shift auto-attendance (bulk shift assignment plus scheduled check-in and check-out with node-cron) and inline editing of saved records in someone else's MERN codebase.</p>
+            <p class="row__stack">React · Express · MongoDB · node-cron</p>
+            <span class="row__year">2026</span>
+          </a>
+        </li>
+      </ol>
+      <a class="link work__more" href="https://github.com/Abhinav-C-7">Everything else is on GitHub ↗</a>
+    </section>
+
+    <!-- Paper -->
+    <section class="paper" id="paper" aria-labelledby="paper-title">
+      <p class="paper__venue">IEEE NetACT 2025 · IEEE Xplore · co-author</p>
+      <h2 class="paper__title" id="paper-title">“On-Demand Service Web Application Architecture”</h2>
+      <div class="paper__foot">
+        <p>The paper documents Done-It's full-stack design and the geolocation matching behind it.</p>
+        <a class="btn btn--line" href="https://doi.org/10.1109/NetACT65906.2025.11188147">Read it on IEEE Xplore <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- About + toolkit -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <figure class="about__portrait">
+        <!-- Replace assets/img/portrait.jpg with your own photo (portrait, about 4:5) -->
+        <img src="assets/img/portrait.jpg" alt="Portrait of Abhinav C" loading="lazy" width="1000" height="1500">
+        <figcaption>Kannur, Kerala · B.Tech CSE, 2025</figcaption>
+      </figure>
+      <div class="about__text">
+        <h2 class="h2" id="about-title">No internship. So I built the product.</h2>
+        <p>I graduated in Computer Science from Vimal Jyothi Engineering College in 2025. Instead of waiting for someone to hand me a ticket, I spent the next year taking TrainLabs from an empty repo to a deployed platform: schema, auth, real-time chat, payments, AI import, two front ends and the infrastructure under them.</p>
+        <p>I'm looking for a full-stack, React Native or Node.js role on a team that ships. I'm happiest owning a feature from the database migration to the button.</p>
+      </div>
+      <div class="toolkit" aria-labelledby="toolkit-title">
+        <h3 class="toolkit__title" id="toolkit-title">Toolkit</h3>
+        <dl class="toolkit__grid">
+          <div><dt>Languages</dt><dd>TypeScript, JavaScript, SQL, Python</dd></div>
+          <div><dt>Frontend</dt><dd>React, React Native, Expo, Next.js, TanStack Query, Zustand, Tailwind CSS</dd></div>
+          <div><dt>Backend</dt><dd>Node.js, NestJS, Express, REST, Socket.IO, JWT / Passport, RBAC, webhooks</dd></div>
+          <div><dt>Data</dt><dd>PostgreSQL, Prisma, MongoDB, schema design, transactions, indexing</dd></div>
+          <div><dt>Cloud</dt><dd>Railway, Vercel, Neon, Cloudflare R2, Linux VPS, Nginx, Jest</dd></div>
+          <div><dt>AI &amp; APIs</dt><dd>Gemini (structured output), Claude Code, Razorpay, Clerk, Google Sign-In</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer · Ft5 statement -->
+  <footer class="foot" id="contact">
+    <p class="foot__line">Need one person who can own the whole stack?</p>
+    <div class="foot__cta">
+      <a class="foot__email" href="mailto:abhinavc038@gmail.com">abhinavc038@gmail.com</a>
+      <button class="btn btn--line copy-email" type="button" data-label="Copy email">Copy email</button>
+    </div>
+    <div class="foot__meta">
+      <nav class="foot__links" aria-label="Elsewhere">
+        <a href="https://github.com/Abhinav-C-7">GitHub</a>
+        <a href="https://linkedin.com/in/abhinav-c-dev">LinkedIn</a>
+        <a href="https://trainlabs.app">TrainLabs</a>
+        <a href="resume.pdf">Résumé</a>
+      </nav>
+      <span>© 2026 Abhinav C · Designed and built in Kannur, Kerala</span>
+    </div>
+  </footer>
+
+  <!-- Command palette -->
+  <div class="cmdk" id="cmdk" aria-hidden="true">
+    <div class="cmdk__backdrop" data-close></div>
+    <div class="cmdk__panel" role="dialog" aria-modal="true" aria-label="Jump anywhere">
+      <div class="cmdk__field">
+        <svg class="cmdk__ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>
+        <input id="cmdk-input" type="text" placeholder="Type a command or section…" autocomplete="off" spellcheck="false" aria-controls="cmdk-results">
+        <kbd>esc</kbd>
+      </div>
+      <div class="cmdk__results" id="cmdk-results" role="listbox"></div>
+      <div class="cmdk__foot" aria-hidden="true"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
